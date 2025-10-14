@@ -43,7 +43,8 @@ print(tipos_de_carro, '\n')
 combinaciones = []
 
 for elemento in range(len(tipos_de_carro)):
-    combinaciones.append([tipos_de_carro[elemento], placas[i], hora_llegada[i]])
+    combinaciones.append([tipos_de_carro[elemento], placas[elemento], hora_llegada[elemento]])
 
-print(combinaciones)
+for combinacion in combinaciones:
+    print(combinacion)
 
