@@ -1,7 +1,14 @@
 
 
-print() 
+print("Hello World!") 
+print("Hello World!") 
+print("Hello World!") 
 
-alguna putada
-nbnb
-hh
+print("Hello World!") 
+print("Hello World!") 
+print("Hello World!") 
+print("Hello World!") 
+
+
+
+
