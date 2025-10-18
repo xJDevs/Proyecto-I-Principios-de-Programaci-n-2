@@ -21,12 +21,24 @@ def opciones_menu():
         
 
 
-while True:
 
-    print('Bienvenido al menu de Ordenammiento Vehicular! 🚘')
-    cantidad = input('Ingrese la cantidad de vehiculos que desea ordenar: \n --> ')
+
+print('Bienvenido al menu de Ordenammiento Vehicular! 🚘')
+
+while True:
+    while True:
+        cantidad = input('Ingrese la cantidad de vehiculos que desea ordenar: \n --> ')
+        if cantidad.isdigit() and int(cantidad) >0:
+            cantidad = int(cantidad)
+            break
+        else:
+            print('Por favor ingrese un numero valido mayor a 0\n')
+            
     
     lista_vehiculos = cantidad_de_vehiculos(cantidad)
+    if not lista_vehiculos:
+        print('No se pudieron generar los vehiculos, intente nuevamente\n')
+        continue
 
 
     seleccion = opciones_menu()
