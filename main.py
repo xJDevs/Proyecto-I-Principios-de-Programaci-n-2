@@ -1,49 +1,21 @@
 
 
-import random 
-
-placas = []
-
-for i in range(2):
-    placa = random.randint(100000, 999999)
-    placas.append(placa)
-
-print(placas, '\n')
-
-hora_llegada = []
-
-for i in range(2):
-    hora = random.randint(0000, 2359)
-    hora_llegada.append(str(hora).zfill(4))
-
-print(hora_llegada, '\n')
-
-opciones = {
-
-'Sedan': 3, 
-'SUV': 3, 
-'Ambulancia': 1, 
-'Motocicleta': 2,
-'Camion': 2,
-'Policia': 1,
-'Bomberos': 1,
-'Bicicleta': 2 
-}
-
-tipos_de_carro = []
-
-for i in range(2):
-    vehiculo = random.choice(list(opciones.keys()))
-    prioridad = opciones[vehiculo]
-    tipos_de_carro.append([vehiculo, prioridad])
-
-print(tipos_de_carro, '\n') 
+carros = [['SUV', 3, '1320', 23455], ['Ambulancia', 1, '1640', 65243 ]]
+index = 1
 
 
-combinaciones = []
 
-for elemento in range(len(tipos_de_carro)):
-    combinaciones.append([tipos_de_carro[elemento], placas[elemento], hora_llegada[elemento]])
+def insertion_sort(lista, index_ordenamiento):
 
-print(combinaciones)
+    for i in range(1, len(lista)):
+        valorActual = lista[i]
+        j = i - 1
+
+        while j >= 0 and lista[j][index_ordenamiento] > valorActual[index_ordenamiento]:
+            lista[j + 1] = lista [j]
+            j -=1
+        lista[j + 1] = valorActual
+    
+    return lista
+
 

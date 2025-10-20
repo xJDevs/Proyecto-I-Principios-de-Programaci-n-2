@@ -1,0 +1,66 @@
+
+#  INSERTION SORT 
+def insertion_sort(lista, index_ordenamiento):
+
+    for i in range(1, len(lista)):
+        valorActual = lista[i]
+        j = i - 1
+
+        while j >= 0 and lista[j][index_ordenamiento] > valorActual[index_ordenamiento]:
+            lista[j + 1] = lista [j]
+            j -=1
+        lista[j + 1] = valorActual
+    
+    return lista
+
+# BUBBLE SORT
+def bubble_sort(lista, index_ordenamiento):
+
+    copia = lista.copy()
+
+    for pasada in range(len(copia) - 1):
+        for valor in range(len(copia) - 1):
+            if copia[valor][index_ordenamiento] > copia[valor + 1][index_ordenamiento]:
+                temporal = copia[valor]
+                copia[valor] = copia[valor + 1]
+                copia[valor + 1] = temporal
+    return copia
+
+# SELECTION SORT 
+
+def selection_sort(lista, index_ordenamiento):
+
+    ordenada = []
+    copia = lista.copy()
+
+    while len(copia) > 0:
+        valor_mas_pequeno = copia[0]
+        for valor in copia:
+            if valor[index_ordenamiento] < valor_mas_pequeno[index_ordenamiento]:
+                valor_mas_pequeno = valor 
+        ordenada.append(valor_mas_pequeno)
+        copia.remove(valor_mas_pequeno)
+
+    return ordenada
+
+# QUICKSORT
+
+def quicksort(lista, index_ordenamiento):
+    if len(lista) <= 1:
+        return lista
+    else:
+        pivote = lista[-1] # puede ser cualquiera 
+        menores = []
+        iguales = []
+        mayores = []
+        
+        for valor in lista:
+            if valor[index_ordenamiento] < pivote[index_ordenamiento]:
+                menores.append(valor)
+            elif valor[index_ordenamiento] > pivote[index_ordenamiento]:
+                mayores.append(valor)
+            else:
+                iguales.append(valor)
+    ordenada = quicksort(menores, index_ordenamiento) + iguales + quicksort(mayores, index_ordenamiento)  # recursividad 
+    # por que iguales sin funcion?
+    return ordenada

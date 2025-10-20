@@ -1,5 +1,3 @@
-
-
 import random 
 
 tipos_de_vehiculos = {
