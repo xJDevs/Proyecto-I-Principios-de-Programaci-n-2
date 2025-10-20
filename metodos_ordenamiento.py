@@ -49,7 +49,7 @@ def quicksort(lista, index_ordenamiento):
     if len(lista) <= 1:
         return lista
     else:
-        pivote = lista[-1] # puede ser cualquiera 
+        pivote = lista[0] 
         menores = []
         iguales = []
         mayores = []
@@ -62,5 +62,5 @@ def quicksort(lista, index_ordenamiento):
             else:
                 iguales.append(valor)
     ordenada = quicksort(menores, index_ordenamiento) + iguales + quicksort(mayores, index_ordenamiento)  # recursividad 
-    # por que iguales sin funcion?
+    
     return ordenada
