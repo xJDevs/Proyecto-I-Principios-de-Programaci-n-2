@@ -1,3 +1,4 @@
+import time
 from generador_cantidad_vehiculos import cantidad_de_vehiculos
 from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
 
@@ -23,7 +24,7 @@ def menu_principal():
 # Se necesitaba seleccionar tambien el criterio de ordenamiento ademas del metodo, me parece que funciona bien por el momento
 def seleccionar_criterio():
     valid = ('1', '2', '3')
-    index_lista = None 
+    index_lista = None
     while True:
         print('=' * 60)
         criterio = input('Seleccione el criterio de ordenamiento:\n'
@@ -43,9 +44,36 @@ def seleccionar_criterio():
     else:
         index_lista = 2
 
-    return index_lista
+    return index_lista, criterio
 
-#falta funcion para medir rendimiento
+def medir_rendimiento(funcion_ordenamiento, lista, index_ordenamiento, critero_texto, nombre_metodo):
+    #Mide el tiempo de ejecucion de un metodo
+
+    print(f'\n⏳ Ordenando {len(lista)} vehículos...')
+    
+    inicio = time.time()
+    resultado = funcion_ordenamiento(lista, index_ordenamiento)
+    fin = time.time()
+    
+    tiempo_transcurrido = fin - inicio
+    
+    criterios_nombres = {
+        '1': 'Hora de llegada ⏰',
+        '2': 'Prioridad 🚨',
+        '3': 'Placa 🚗'
+    }
+    
+    print('\n')
+    print('=' * 60)
+    print('RESULTADOS DEL ORDENAMIENTO')
+    print('=' * 60)
+    print(f'Método utilizado:     {nombre_metodo}')
+    print(f'Criterio:             {criterios_nombres[criterio_texto]}')
+    print(f'Vehículos ordenados:  {len(lista)}')
+    print(f'Tiempo de ejecución:  {tiempo_transcurrido:.6f} segundos')
+    print('=' * 60)
+    
+    return tiempo_transcurrido, resultado
 
 print('Bienvenido al menú de Ordenammiento Vehicular! 🚘')
 
@@ -64,25 +92,26 @@ while True:
         print('No se pudieron generar los vehiculos, intente nuevamente\n')
         continue
 
-    criterio = seleccionar_criterio()
+    index_ordenamiento, criterio_texto = seleccionar_criterio()
     seleccion = menu_principal()
 
 
     if seleccion == '1':
-        ordenada = bubble_sort(lista_vehiculos, criterio)
+        tiempo, ordenada = medir_rendimiento(bubble_sort,lista_vehiculos, index_ordenamiento, criterio_texto,'Bubble Sort 🫧' )
         break
     elif seleccion == '2':
-        ordenada = selection_sort(lista_vehiculos, criterio)
+        tiempo, ordenada = medir_rendimiento(selection_sort,lista_vehiculos, index_ordenamiento, criterio_texto,'Selection Sort 🎯')
         break
     elif seleccion == '3':
-        ordenada = insertion_sort(lista_vehiculos, criterio)
+        tiempo, ordenada = medir_rendimiento(insertion_sort,lista_vehiculos, index_ordenamiento, criterio_texto,'Insertion Sort 🧩')
         break
     elif seleccion == '4':
-        ordenada = quicksort(lista_vehiculos, criterio)
+        tiempo, ordenada = medir_rendimiento(quicksort,lista_vehiculos, index_ordenamiento, criterio_texto,'Quick Sort ⚡️')
         break
     else:
         print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
         break
+print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
 
 print(ordenada)
 
