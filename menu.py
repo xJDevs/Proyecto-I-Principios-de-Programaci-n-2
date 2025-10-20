@@ -1,5 +1,5 @@
 import time
-from generador_cantidad_vehiculos import cantidad_de_vehiculos
+from generador_cantidad_vehiculos import generador_lista_vehiculos
 from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
 
 def menu_principal():
@@ -28,9 +28,9 @@ def seleccionar_criterio():
     while True:
         print('=' * 60)
         criterio = input('Seleccione el criterio de ordenamiento:\n'
-                         '1.Prioridad 🚨\n'
-                         '2.Hora de llegada ⏰ \n'
-                         '3.Placa 🚗 \n'
+                         '1. Prioridad 🚨\n'
+                         '2. Hora de llegada ⏰ \n'
+                         '3. Placa 🚗 \n'
                          '➡️: ')
         if criterio not in valid:
             print('Por favor seleccione una de las opciones disponibles del menú\n')
@@ -58,8 +58,8 @@ def medir_rendimiento(funcion_ordenamiento, lista, index_ordenamiento, critero_t
     tiempo_transcurrido = fin - inicio
     
     criterios_nombres = {
-        '1': 'Hora de llegada ⏰',
-        '2': 'Prioridad 🚨',
+        '1': 'Prioridad 🚨',
+        '2': 'Hora de llegada ⏰',
         '3': 'Placa 🚗'
     }
     
@@ -86,7 +86,7 @@ while True:
         else:
             print('Por favor ingrese un numero entero valido mayor a 0\n')
             
-    lista_vehiculos = cantidad_de_vehiculos(cantidad)
+    lista_vehiculos = generador_lista_vehiculos(cantidad)
 
     if not lista_vehiculos:
         print('No se pudieron generar los vehiculos, intente nuevamente\n')
@@ -114,5 +114,6 @@ while True:
 print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
 
 print(ordenada)
+print(tiempo)
 
 

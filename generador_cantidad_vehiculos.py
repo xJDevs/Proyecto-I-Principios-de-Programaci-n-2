@@ -13,7 +13,7 @@ tipos_de_vehiculos = {
 }
 
 
-def cantidad_de_vehiculos(cantidad_vehiculos):
+def generador_lista_vehiculos(cantidad_vehiculos):
 
     combinaciones = []
     while True:
@@ -27,12 +27,9 @@ def cantidad_de_vehiculos(cantidad_vehiculos):
     for _ in range(cantidad_vehiculos):
 
         placa = random.randint(100000, 999999)
-
         hora = str(random.randint(0000, 2359)).zfill(4) # .zfill() rellena con 0's a la izquierda. Solo funciona con strings
-
         vehiculo = random.choice(list(tipos_de_vehiculos.keys())) # genera una lista con las keys del diccionario y obtiene un vehiculo random de la misma 
         prioridad = tipos_de_vehiculos[vehiculo]
-    
         combinaciones.append([vehiculo, prioridad, placa, hora])
 
     return combinaciones
