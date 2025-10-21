@@ -105,6 +105,5 @@ def ejecutar_menu_ordenamiento_vehicular():
 
     print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
     print(lista_ordenada)
-    print(tiempo_transcurrido)
 
 ejecutar_menu_ordenamiento_vehicular()
