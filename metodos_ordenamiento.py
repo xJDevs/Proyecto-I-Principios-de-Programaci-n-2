@@ -1,4 +1,4 @@
-
+from generador_cantidad_vehiculos import generador_lista_vehiculos
 #  INSERTION SORT 
 def insertion_sort(lista, index_ordenamiento):
 
@@ -64,3 +64,27 @@ def quicksort(lista, index_ordenamiento):
     ordenada = quicksort(menores, index_ordenamiento) + iguales + quicksort(mayores, index_ordenamiento)  # recursividad 
     
     return ordenada
+
+
+
+########################################
+
+# lista = generador_lista_vehiculos(15)
+
+# def metodo_rapido(lista):
+#     lista_prioridad = []
+#     resto_de_listas = []
+
+#     for vehiculo in lista:
+#         if vehiculo[1] == 1:
+#             lista_prioridad.append(vehiculo)
+#         else:
+#             resto_de_listas.append(vehiculo)
+    
+#     resto_ordenado = quicksort(resto_de_listas, 3)
+#     resultado = lista_prioridad + resto_de_listas
+#     print(resultado)
+
+
+# metodo_rapido(lista)
+            
