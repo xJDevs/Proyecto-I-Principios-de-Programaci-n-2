@@ -127,5 +127,12 @@ def ejecutar_menu_ordenamiento_vehicular():
             break
 
 
+<<<<<<< Updated upstream
+=======
+    print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
+    print(lista_ordenada)
+    
+    
+>>>>>>> Stashed changes
 
 ejecutar_menu_ordenamiento_vehicular()
