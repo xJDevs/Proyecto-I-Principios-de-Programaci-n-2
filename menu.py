@@ -1,11 +1,13 @@
-import time, textwrap
+import time, textwrap, os
 from generador_cantidad_vehiculos import generador_lista_vehiculos
 from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
 
-def agregar_tabla_txt(resultado):
-
-    with open('/Users/johel/Desktop/Johel/TEC Johel/Progra 2/Proyecto 1/Proyecto-I-Principios-de-Programaci-n-2/tablas_comparativas.txt', 'a') as archivo:
+def agregar_tabla_txt(resultado): #con OS se guarda de una forma portable
+    carpeta_actual = os.path.dirname(__file__)
+    ruta_archivo = os.path.join(carpeta_actual, 'tablas_comparativas.txt')
+    with open(ruta_archivo,'a', encoding='utf-8') as archivo:
         archivo.write(resultado)
+        archivo.write('\n') #agrega una linea entre tablas siento que se ve mas ordenado
 
 def menu_principal():
 
@@ -87,8 +89,8 @@ def medir_rendimiento(funcion_ordenamiento, lista, index_ordenamiento, critero_t
     
     return tiempo_transcurrido, resultado
 
-print('\nBienvenido al menú de Ordenammiento Vehicular! 🚘')
-
+print('\nBienvenido al menú de Ordenamiento Vehicular! 🚘')
+print('=' * 60)
 while True:
     while True:
         cantidad = input('Ingrese la cantidad de vehiculos que desea ordenar: \n --> ')
@@ -120,14 +122,19 @@ while True:
         print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
         break
 
-    repetir = input('\nDesea ordenar otra vez, una cantiad de vehiculos diferente?\n' \
+    print('=' * 60)
+    repetir = input('\n¿Desea ordenar una cantidad de vehiculos diferente?\n' \
     '1. Si\n'
     '2. No\n'
     '-->: ')
-    print()
+    print('=' * 60)
 
     if repetir != '1':
+        print('\n' + '=' * 60)
+        print('=' * 60)
         print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
+        print('=' * 60)
+        print('=' * 60)
         break
 
 

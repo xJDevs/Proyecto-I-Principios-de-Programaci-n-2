@@ -1,0 +1,90 @@
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  2
+Tiempo de ejecución:  0.000021 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  12
+Tiempo de ejecución:  0.000053 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Selection Sort 🎯
+Criterio:             Hora de llegada ⏰
+Vehículos ordenados:  3
+Tiempo de ejecución:  0.000018 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Placa 🚗
+Vehículos ordenados:  4
+Tiempo de ejecución:  0.000012 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  12
+Tiempo de ejecución:  0.000029 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Insertion Sort 🧩
+Criterio:             Hora de llegada ⏰
+Vehículos ordenados:  5
+Tiempo de ejecución:  0.000053 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Placa 🚗
+Vehículos ordenados:  6
+Tiempo de ejecución:  0.000045 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Hora de llegada ⏰
+Vehículos ordenados:  2
+Tiempo de ejecución:  0.000014 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Selection Sort 🎯
+Criterio:             Placa 🚗
+Vehículos ordenados:  5
+Tiempo de ejecución:  0.000146 segundos
+============================================================
+
