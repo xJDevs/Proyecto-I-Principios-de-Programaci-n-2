@@ -1,4 +1,4 @@
-import time, textwrap
+import time, textwrap, os
 from generador_cantidad_vehiculos import generador_lista_vehiculos
 from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
 
@@ -16,10 +16,12 @@ CRITERIOS_DE_ORDEN = {
     "3": (2, "Placa 🚗")
 }
 
-def agregar_tabla_txt(resultado):
-
-    with open('/Users/johel/Desktop/Johel/TEC Johel/Progra 2/Proyecto 1/Proyecto-I-Principios-de-Programaci-n-2/tablas_comparativas.txt', 'a') as archivo:
+def agregar_tabla_txt(resultado): #con OS se guarda de una forma portable
+    carpeta_actual = os.path.dirname(__file__)
+    ruta_archivo = os.path.join(carpeta_actual, 'tablas_comparativas.txt')
+    with open (ruta_archivo,'a', encoding='utf-8') as archivo:
         archivo.write(resultado)
+        archivo.write('\n') #agrega una linea entre tablas siento que se ve mas ordenado
 
 '''Se le pasa como parametro el texto que se desea imprimir y la lista de opciones validas'''
 def soliciar_opcion_valida(texto, opciones_validas):
@@ -93,7 +95,7 @@ def medir_rendimiento_y_ordenar(funcion_ordenamiento, lista_vehiculos, index_cri
 def ejecutar_menu_ordenamiento_vehicular():
 
     while True: 
-        print('\nBienvenido al menú de Ordenammiento Vehicular! 🚘')
+        print('\nBienvenido al menú de Ordenamiento Vehicular! 🚘')
 
         cantidad_de_vehiculos = solicitar_entero_positivo('Ingrese la cantidad de vehiculos que desea ordenar: \n --> ')
         lista_vehiculos = generador_lista_vehiculos(cantidad_de_vehiculos)
@@ -117,22 +119,17 @@ def ejecutar_menu_ordenamiento_vehicular():
             etiqueta_ordenamiento
         )
     
-        repetir = soliciar_opcion_valida('\nDesea ordenar otra vez, una cantiad de vehiculos diferente?\n' \
+        repetir = soliciar_opcion_valida('\n¿Desea ordenar una cantiad de vehiculos diferente?\n' \
         '1. Si\n'
         '2. No\n'
         '-->: ', 
         ('1','2'))
+
         if repetir != '1':
-            print("Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻")
+            print('\n' + '=' * 60)
+            print('=' * 60)
+            print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
+            print('=' * 60)
+            print('=' * 60)
             break
-
-
-<<<<<<< Updated upstream
-=======
-    print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
-    print(lista_ordenada)
-    
-    
->>>>>>> Stashed changes
-
 ejecutar_menu_ordenamiento_vehicular()
