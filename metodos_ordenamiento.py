@@ -27,7 +27,6 @@ def bubble_sort(lista, index_ordenamiento):
     return copia
 
 # SELECTION SORT 
-
 def selection_sort(lista, index_ordenamiento):
 
     ordenada = []
@@ -44,7 +43,6 @@ def selection_sort(lista, index_ordenamiento):
     return ordenada
 
 # QUICKSORT
-
 def quicksort(lista, index_ordenamiento):
     if len(lista) <= 1:
         return lista
@@ -69,22 +67,22 @@ def quicksort(lista, index_ordenamiento):
 
 ########################################
 
-# lista = generador_lista_vehiculos(15)
+lista = generador_lista_vehiculos(15)
 
-# def metodo_rapido(lista):
-#     lista_prioridad = []
-#     resto_de_listas = []
+def metodo_rapido(lista):
+    lista_prioridad = []
+    resto_de_listas = []
 
-#     for vehiculo in lista:
-#         if vehiculo[1] == 1:
-#             lista_prioridad.append(vehiculo)
-#         else:
-#             resto_de_listas.append(vehiculo)
+    for vehiculo in lista:
+        if vehiculo[1] == 1:
+            lista_prioridad.append(vehiculo)
+        else:
+            resto_de_listas.append(vehiculo)
     
-#     resto_ordenado = quicksort(resto_de_listas, 3)
-#     resultado = lista_prioridad + resto_de_listas
-#     print(resultado)
+    resto_ordenado = quicksort(resto_de_listas, 3)
+    resultado = lista_prioridad + resto_de_listas
+    print(resultado)
 
 
-# metodo_rapido(lista)
+metodo_rapido(lista)
             

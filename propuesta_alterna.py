@@ -1,4 +1,4 @@
-import time
+import time, textwrap
 from generador_cantidad_vehiculos import generador_lista_vehiculos
 from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
 
@@ -15,6 +15,11 @@ CRITERIOS_DE_ORDEN = {
     "2": (3, "Hora de llegada ⏰"),
     "3": (2, "Placa 🚗")
 }
+
+def agregar_tabla_txt(resultado):
+
+    with open('/Users/johel/Desktop/Johel/TEC Johel/Progra 2/Proyecto 1/Proyecto-I-Principios-de-Programaci-n-2/tablas_comparativas.txt', 'a') as archivo:
+        archivo.write(resultado)
 
 '''Se le pasa como parametro el texto que se desea imprimir y la lista de opciones validas'''
 def soliciar_opcion_valida(texto, opciones_validas):
@@ -65,46 +70,62 @@ def medir_rendimiento_y_ordenar(funcion_ordenamiento, lista_vehiculos, index_cri
     lista_ordenada = funcion_ordenamiento(lista_vehiculos, index_criterio)
     fin = time.time()
     tiempo_transcurrido = fin - inicio
-    
-    print('\n' + '=' * 60)
-    print('RESULTADOS DEL ORDENAMIENTO')
-    print('=' * 60)
-    print(f'Método utilizado:     {nombre_metodo}')
-    print(f'Criterio:             {etiqueta_criterio}')
-    print(f'Vehículos ordenados:  {len(lista_vehiculos)}')
-    print(f'Tiempo de ejecución:  {tiempo_transcurrido:.6f} segundos')
-    print('=' * 60)
+
+    tabla = textwrap.dedent(f'''
+    {'=' * 60}
+    RESULTADOS DEL ORDENAMIENTO
+    {'=' * 60}
+    Método utilizado:     {nombre_metodo}
+    Criterio:             {etiqueta_criterio}
+    Vehículos ordenados:  {len(lista_vehiculos)}
+    Tiempo de ejecución:  {tiempo_transcurrido:.6f} segundos
+    {'=' * 60}
+    ''')
+
+    print(tabla)
+    agregar_tabla_txt(tabla)
+
+    print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:\n')
+    print(lista_ordenada)
     
     return tiempo_transcurrido, lista_ordenada
 
 def ejecutar_menu_ordenamiento_vehicular():
 
-    print('Bienvenido al menú de Ordenammiento Vehicular! 🚘')
+    while True: 
+        print('\nBienvenido al menú de Ordenammiento Vehicular! 🚘')
 
-    cantidad_de_vehiculos = solicitar_entero_positivo('Ingrese la cantidad de vehiculos que desea ordenar: \n --> ')
-    lista_vehiculos = generador_lista_vehiculos(cantidad_de_vehiculos)
+        cantidad_de_vehiculos = solicitar_entero_positivo('Ingrese la cantidad de vehiculos que desea ordenar: \n --> ')
+        lista_vehiculos = generador_lista_vehiculos(cantidad_de_vehiculos)
 
-    if not lista_vehiculos:
-        print('No se pudieron generar los vehiculos. Intentelo de nuevo')
-        return
+        if not lista_vehiculos:
+            print('No se pudieron generar los vehiculos. Intentelo de nuevo')
+            return
+        
+        index_criterio, etiqueta_criterio = mostrar_menu_criterio_y_obtener_seleccion()
+        funcion_ordenamiento, etiqueta_ordenamiento = mostrar_menu_ordenamiento_y_obtener_seleccion()
+
+        if funcion_ordenamiento is None:
+            print("Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻")
+            return 
+        
+        medir_rendimiento_y_ordenar(
+            funcion_ordenamiento, 
+            lista_vehiculos,
+            index_criterio,
+            etiqueta_criterio,
+            etiqueta_ordenamiento
+        )
     
-    index_criterio, etiqueta_criterio = mostrar_menu_criterio_y_obtener_seleccion()
-    funcion_ordenamiento, etiqueta_ordenamiento = mostrar_menu_ordenamiento_y_obtener_seleccion()
+        repetir = soliciar_opcion_valida('\nDesea ordenar otra vez, una cantiad de vehiculos diferente?\n' \
+        '1. Si\n'
+        '2. No\n'
+        '-->: ', 
+        ('1','2'))
+        if repetir != '1':
+            print("Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻")
+            break
 
-    if funcion_ordenamiento is None:
-        print("Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻")
-        return 
-    
-    tiempo_transcurrido, lista_ordenada = medir_rendimiento_y_ordenar(
-        funcion_ordenamiento, 
-        lista_vehiculos,
-        index_criterio,
-        etiqueta_criterio,
-        etiqueta_ordenamiento
-    )
 
-    print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
-    print(lista_ordenada)
-    print(tiempo_transcurrido)
 
 ejecutar_menu_ordenamiento_vehicular()

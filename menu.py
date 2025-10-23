@@ -1,6 +1,11 @@
-import time
+import time, textwrap
 from generador_cantidad_vehiculos import generador_lista_vehiculos
 from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
+
+def agregar_tabla_txt(resultado):
+
+    with open('/Users/johel/Desktop/Johel/TEC Johel/Progra 2/Proyecto 1/Proyecto-I-Principios-de-Programaci-n-2/tablas_comparativas.txt', 'a') as archivo:
+        archivo.write(resultado)
 
 def menu_principal():
 
@@ -63,19 +68,26 @@ def medir_rendimiento(funcion_ordenamiento, lista, index_ordenamiento, critero_t
         '3': 'Placa 🚗'
     }
     
-    print('\n')
-    print('=' * 60)
-    print('RESULTADOS DEL ORDENAMIENTO')
-    print('=' * 60)
-    print(f'Método utilizado:     {nombre_metodo}')
-    print(f'Criterio:             {criterios_nombres[criterio_texto]}')
-    print(f'Vehículos ordenados:  {len(lista)}')
-    print(f'Tiempo de ejecución:  {tiempo_transcurrido:.6f} segundos')
-    print('=' * 60)
+    tabla = textwrap.dedent(f'''
+    {'=' * 60}
+    RESULTADOS DEL ORDENAMIENTO
+    {'=' * 60}
+    Método utilizado:     {nombre_metodo}
+    Criterio:             {criterios_nombres[criterio_texto]}
+    Vehículos ordenados:  {len(lista)}
+    Tiempo de ejecución:  {tiempo_transcurrido:.6f} segundos
+    {'=' * 60}
+    ''')
+
+    print(tabla)
+    agregar_tabla_txt(tabla)
+
+    print('📋 Lista de vehículos ordenados según el criterio seleccionado:\n')
+    print(resultado)
     
     return tiempo_transcurrido, resultado
 
-print('Bienvenido al menú de Ordenammiento Vehicular! 🚘')
+print('\nBienvenido al menú de Ordenammiento Vehicular! 🚘')
 
 while True:
     while True:
@@ -98,22 +110,26 @@ while True:
 
     if seleccion == '1':
         tiempo, ordenada = medir_rendimiento(bubble_sort,lista_vehiculos, index_ordenamiento, criterio_texto,'Bubble Sort 🫧' )
-        break
     elif seleccion == '2':
         tiempo, ordenada = medir_rendimiento(selection_sort,lista_vehiculos, index_ordenamiento, criterio_texto,'Selection Sort 🎯')
-        break
     elif seleccion == '3':
         tiempo, ordenada = medir_rendimiento(insertion_sort,lista_vehiculos, index_ordenamiento, criterio_texto,'Insertion Sort 🧩')
-        break
     elif seleccion == '4':
         tiempo, ordenada = medir_rendimiento(quicksort,lista_vehiculos, index_ordenamiento, criterio_texto,'Quick Sort ⚡️')
-        break
     else:
         print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
         break
-print('\n📋 Lista de vehículos ordenados según el criterio seleccionado:')
 
-print(ordenada)
-print(tiempo)
+    repetir = input('\nDesea ordenar otra vez, una cantiad de vehiculos diferente?\n' \
+    '1. Si\n'
+    '2. No\n'
+    '-->: ')
+    print()
+
+    if repetir != '1':
+        print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
+        break
+
+
 
 
