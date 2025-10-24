@@ -1,13 +1,14 @@
 import time, textwrap, os
 from generador_cantidad_vehiculos import generador_lista_vehiculos
-from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort
+from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort, metodo_rapido, preclasificacion_por_prioridad
 
 METODOS_DE_ORDENAMIENTO = {
     "1": (bubble_sort, "Bubble Sort 🫧"),
     "2": (selection_sort, "Selection Sort 🎯"), 
     "3": (insertion_sort, "Insertion Sort 🧩"),
     "4": (quicksort, "Quick Sort ⚡️"),
-    "5": (None, "Salir 👀")
+    "5": (preclasificacion_por_prioridad, "Propuesta de Mejora 🐍"), 
+    "6": (None, "Salir 👀")
 }
 
 CRITERIOS_DE_ORDEN = {
@@ -56,7 +57,8 @@ def mostrar_menu_ordenamiento_y_obtener_seleccion():
     '2. Selection Sort 🎯 \n' 
     '3. Insertion Sort 🧩 \n' 
     '4. Quick Sort ⚡️ \n' 
-    '5. Salir 👀 \n'
+    '5. Propuesta de Mejora 🐍 \n'
+    '6. Salir 👀 \n'
     '➡️: '
     )
 
@@ -104,12 +106,17 @@ def ejecutar_menu_ordenamiento_vehicular():
             print('No se pudieron generar los vehiculos. Intentelo de nuevo')
             return
         
-        index_criterio, etiqueta_criterio = mostrar_menu_criterio_y_obtener_seleccion()
         funcion_ordenamiento, etiqueta_ordenamiento = mostrar_menu_ordenamiento_y_obtener_seleccion()
+
+        if funcion_ordenamiento == preclasificacion_por_prioridad:
+             index_criterio, etiqueta_criterio = None, 'No Aplica'
+        else: 
+            index_criterio, etiqueta_criterio = mostrar_menu_criterio_y_obtener_seleccion()
 
         if funcion_ordenamiento is None:
             print("Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻")
-            return 
+            return
+        
         
         medir_rendimiento_y_ordenar(
             funcion_ordenamiento, 
@@ -119,17 +126,21 @@ def ejecutar_menu_ordenamiento_vehicular():
             etiqueta_ordenamiento
         )
     
-        repetir = soliciar_opcion_valida('\n¿Desea ordenar una cantiad de vehiculos diferente?\n' \
+        repetir = soliciar_opcion_valida('\n¿Desea ordenar una cantidad de vehiculos diferente?\n' \
         '1. Si\n'
         '2. No\n'
         '-->: ', 
         ('1','2'))
 
         if repetir != '1':
-            print('\n' + '=' * 60)
-            print('=' * 60)
-            print('Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻')
-            print('=' * 60)
-            print('=' * 60)
-            break
+            print(textwrap.dedent(f'''
+            {'=' * 60}
+            {'=' * 60}
+            Gracias por usar nuestro sistema de Ordenamiento Vehicular! 💻
+            {'=' * 60}
+            {'=' * 60}
+            '''))
+
 ejecutar_menu_ordenamiento_vehicular()
+
+

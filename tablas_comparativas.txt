@@ -4,18 +4,8 @@ RESULTADOS DEL ORDENAMIENTO
 ============================================================
 Método utilizado:     Bubble Sort 🫧
 Criterio:             Prioridad 🚨
-Vehículos ordenados:  2
-Tiempo de ejecución:  0.000021 segundos
-============================================================
-
-
-============================================================
-RESULTADOS DEL ORDENAMIENTO
-============================================================
-Método utilizado:     Bubble Sort 🫧
-Criterio:             Prioridad 🚨
-Vehículos ordenados:  12
-Tiempo de ejecución:  0.000053 segundos
+Vehículos ordenados:  10
+Tiempo de ejecución:  0.000069 segundos
 ============================================================
 
 
@@ -23,29 +13,9 @@ Tiempo de ejecución:  0.000053 segundos
 RESULTADOS DEL ORDENAMIENTO
 ============================================================
 Método utilizado:     Selection Sort 🎯
-Criterio:             Hora de llegada ⏰
-Vehículos ordenados:  3
-Tiempo de ejecución:  0.000018 segundos
-============================================================
-
-
-============================================================
-RESULTADOS DEL ORDENAMIENTO
-============================================================
-Método utilizado:     Quick Sort ⚡️
-Criterio:             Placa 🚗
-Vehículos ordenados:  4
-Tiempo de ejecución:  0.000012 segundos
-============================================================
-
-
-============================================================
-RESULTADOS DEL ORDENAMIENTO
-============================================================
-Método utilizado:     Bubble Sort 🫧
 Criterio:             Prioridad 🚨
-Vehículos ordenados:  12
-Tiempo de ejecución:  0.000029 segundos
+Vehículos ordenados:  10
+Tiempo de ejecución:  0.000037 segundos
 ============================================================
 
 
@@ -53,9 +23,9 @@ Tiempo de ejecución:  0.000029 segundos
 RESULTADOS DEL ORDENAMIENTO
 ============================================================
 Método utilizado:     Insertion Sort 🧩
-Criterio:             Hora de llegada ⏰
-Vehículos ordenados:  5
-Tiempo de ejecución:  0.000053 segundos
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10
+Tiempo de ejecución:  0.000029 segundos
 ============================================================
 
 
@@ -63,19 +33,30 @@ Tiempo de ejecución:  0.000053 segundos
 RESULTADOS DEL ORDENAMIENTO
 ============================================================
 Método utilizado:     Quick Sort ⚡️
-Criterio:             Placa 🚗
-Vehículos ordenados:  6
-Tiempo de ejecución:  0.000045 segundos
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10
+Tiempo de ejecución:  0.000035 segundos
 ============================================================
 
 
 ============================================================
 RESULTADOS DEL ORDENAMIENTO
 ============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  10
+Tiempo de ejecución:  0.000036 segundos
+============================================================
+
+##################### Ahora con 100 ##################
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
 Método utilizado:     Bubble Sort 🫧
-Criterio:             Hora de llegada ⏰
-Vehículos ordenados:  2
-Tiempo de ejecución:  0.000014 segundos
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  100
+Tiempo de ejecución:  0.002522 segundos
 ============================================================
 
 
@@ -83,8 +64,228 @@ Tiempo de ejecución:  0.000014 segundos
 RESULTADOS DEL ORDENAMIENTO
 ============================================================
 Método utilizado:     Selection Sort 🎯
-Criterio:             Placa 🚗
-Vehículos ordenados:  5
-Tiempo de ejecución:  0.000146 segundos
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  100
+Tiempo de ejecución:  0.000525 segundos
 ============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Insertion Sort 🧩
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  100
+Tiempo de ejecución:  0.000374 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  100
+Tiempo de ejecución:  0.000087 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  100
+Tiempo de ejecución:  0.000119 segundos
+============================================================
+
+##################### Ahora con 1000 ##################
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  1000
+Tiempo de ejecución:  0.079914 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Selection Sort 🎯
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  1000
+Tiempo de ejecución:  0.026825 segundos
+============================================================
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Insertion Sort 🧩
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  1000
+Tiempo de ejecución:  0.026567 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  1000
+Tiempo de ejecución:  0.000523 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  1000
+Tiempo de ejecución:  0.001969 segundos
+============================================================
+
+##################### Ahora con 10000 ##################
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  5.084572 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Selection Sort 🎯
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  1.166024 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Insertion Sort 🧩
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  1.084518 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.004197 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.022299 segundos
+============================================================
+
+
+########### se le cambio index_criterio a metodo rapido: en vez de usar hora, usa placa ############
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.004065 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.020511 segundos
+============================================================
+
+###### nueva funcion #####
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.003317 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.002062 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.003285 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  10000
+Tiempo de ejecución:  0.001701 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  100000
+Tiempo de ejecución:  0.029168 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  100000
+Tiempo de ejecución:  0.010670 segundos
+============================================================
+
+
 

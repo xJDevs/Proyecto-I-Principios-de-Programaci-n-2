@@ -64,12 +64,11 @@ def quicksort(lista, index_ordenamiento):
     return ordenada
 
 
-
 ########################################
 
-lista = generador_lista_vehiculos(15)
+# Este funciona mejor que todas excepto quicksort 
 
-def metodo_rapido(lista):
+def metodo_rapido(lista, index_ordenamiento=None):
     lista_prioridad = []
     resto_de_listas = []
 
@@ -79,10 +78,21 @@ def metodo_rapido(lista):
         else:
             resto_de_listas.append(vehiculo)
     
-    resto_ordenado = quicksort(resto_de_listas, 3)
-    resultado = lista_prioridad + resto_de_listas
-    print(resultado)
+    resto_ordenado = quicksort(resto_de_listas, 2)
+    resultado = lista_prioridad + resto_ordenado
+    return resultado
+
+# este revienta a todas jaja
+
+def preclasificacion_por_prioridad(lista, index_ordenamiento=None):
+    prioridades = {1: [], 2: [], 3: []}
+
+    for vehiculo in lista:
+        prioridades[vehiculo[1]].append(vehiculo)
+
+    return prioridades[1] + prioridades[2] + prioridades[3]
+
+# este funciona mejor porque es lineal. a diferencia de los otros algoritmos, este metodo no compara, no cambia posiciones, no ve valores vecinos, solamente clasifica y agrega a una lista cuando cumple la condicion que queremos. esto tiene una explicacion, aun no lo comprendo mucho (tiene que ver con algo que se llama "Big O Notation"), pero basicamente se debe a como crecen la cantidad de operaciones que hace un algoritmo en base a la cantidad de comparaciones que tiene ue hacer, es decir, se multiplican la cantidad de operaciones al cuadrado, conforme crece el agoritmo. Este metodo al ordenar de manera lineal, no crece exponencialmente: si hay 1000 datos a clasificar, clasifica 1000 datos y punto 
 
 
-metodo_rapido(lista)
-            
+
