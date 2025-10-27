@@ -289,3 +289,73 @@ Tiempo de ejecución:  0.010670 segundos
 
 
 
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Tipo de Vehiculo 🚘
+Vehículos ordenados:  15
+Tiempo de ejecución:  0.000073 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  15
+Tiempo de ejecución:  0.000031 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  20
+Tiempo de ejecución:  0.000195 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  20
+Tiempo de ejecución:  0.000031 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  1500000
+Tiempo de ejecución:  0.101514 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Quick Sort ⚡️
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  1500000
+Tiempo de ejecución:  0.237359 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Propuesta de Mejora 🐍
+Criterio:             No Aplica
+Vehículos ordenados:  1500000
+Tiempo de ejecución:  0.101075 segundos
+============================================================
+

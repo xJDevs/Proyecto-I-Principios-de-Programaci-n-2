@@ -1,4 +1,4 @@
-import random 
+import random, textwrap
 
 tipos_de_vehiculos = {
 
@@ -31,6 +31,16 @@ def generador_lista_vehiculos(cantidad_vehiculos):
         vehiculo = random.choice(list(tipos_de_vehiculos.keys())) # genera una lista con las keys del diccionario y obtiene un vehiculo random de la misma 
         prioridad = tipos_de_vehiculos[vehiculo]
         combinaciones.append([vehiculo, prioridad, placa, hora])
+
+    print(textwrap.dedent(f'''
+    {'=' * 60}
+    LISTA DESORDENADA 
+    {'=' * 60}
+    {combinaciones}
+    {'=' * 60}
+    {'=' * 60}
+    '''))
+
 
     return combinaciones
 

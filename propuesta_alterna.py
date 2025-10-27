@@ -14,7 +14,8 @@ METODOS_DE_ORDENAMIENTO = {
 CRITERIOS_DE_ORDEN = {
     "1": (1, "Prioridad 🚨"), 
     "2": (3, "Hora de llegada ⏰"),
-    "3": (2, "Placa 🚗")
+    "3": (2, "Placa 🔢"), 
+    "4": (0, "Tipo de Vehiculo 🚘")
 }
 
 def agregar_tabla_txt(resultado): #con OS se guarda de una forma portable
@@ -45,6 +46,7 @@ def mostrar_menu_criterio_y_obtener_seleccion():
         '1. Prioridad 🚨\n'
         '2. Hora de llegada ⏰ \n'
         '3. Placa 🚗 \n'
+        '4. Tipo de Vehiculo 🚘 \n'
         '➡️: '
     )
     opcion = soliciar_opcion_valida(texto, CRITERIOS_DE_ORDEN.keys())
