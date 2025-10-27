@@ -26,7 +26,7 @@ def agregar_tabla_txt(resultado): # con OS se guarda de una forma portable
         archivo.write('\n') 
 
 '''Se le pasa como parametro el texto que se desea imprimir y la lista de opciones validas'''
-def soliciar_opcion_valida(texto, opciones_validas):
+def solicitar_opcion_valida(texto, opciones_validas):
     while True:
         opcion = input(texto)
         if opcion in opciones_validas:
@@ -49,7 +49,7 @@ def mostrar_menu_criterio_y_obtener_seleccion():
         '4. Tipo de Vehiculo 🚘 \n'
         '➡️: '
     )
-    opcion = soliciar_opcion_valida(texto, CRITERIOS_DE_ORDEN.keys())
+    opcion = solicitar_opcion_valida(texto, CRITERIOS_DE_ORDEN.keys())
     return CRITERIOS_DE_ORDEN[opcion]
 
 def mostrar_menu_ordenamiento_y_obtener_seleccion():
@@ -64,7 +64,7 @@ def mostrar_menu_ordenamiento_y_obtener_seleccion():
     '➡️: '
     )
 
-    opcion = soliciar_opcion_valida(texto, METODOS_DE_ORDENAMIENTO.keys())
+    opcion = solicitar_opcion_valida(texto, METODOS_DE_ORDENAMIENTO.keys())
     return METODOS_DE_ORDENAMIENTO[opcion]
 
 def medir_rendimiento_y_ordenar(funcion_ordenamiento, lista_vehiculos, index_criterio, etiqueta_criterio, nombre_metodo):
@@ -128,7 +128,7 @@ def ejecutar_menu_ordenamiento_vehicular():
             etiqueta_ordenamiento
         )
     
-        repetir = soliciar_opcion_valida('\n¿Desea ordenar una cantidad de vehiculos diferente?\n' \
+        repetir = solicitar_opcion_valida('\n¿Desea ordenar una cantidad de vehiculos diferente?\n' \
         '1. Si\n'
         '2. No\n'
         '-->: ', 
