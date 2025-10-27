@@ -18,12 +18,12 @@ CRITERIOS_DE_ORDEN = {
     "4": (0, "Tipo de Vehiculo 🚘")
 }
 
-def agregar_tabla_txt(resultado): #con OS se guarda de una forma portable
+def agregar_tabla_txt(resultado): # con OS se guarda de una forma portable
     carpeta_actual = os.path.dirname(__file__)
     ruta_archivo = os.path.join(carpeta_actual, 'tablas_comparativas.txt')
     with open (ruta_archivo,'a', encoding='utf-8') as archivo:
         archivo.write(resultado)
-        archivo.write('\n') #agrega una linea entre tablas siento que se ve mas ordenado
+        archivo.write('\n') 
 
 '''Se le pasa como parametro el texto que se desea imprimir y la lista de opciones validas'''
 def soliciar_opcion_valida(texto, opciones_validas):
@@ -68,7 +68,7 @@ def mostrar_menu_ordenamiento_y_obtener_seleccion():
     return METODOS_DE_ORDENAMIENTO[opcion]
 
 def medir_rendimiento_y_ordenar(funcion_ordenamiento, lista_vehiculos, index_criterio, etiqueta_criterio, nombre_metodo):
-    #Mide el tiempo de ejecucion de un metodo
+    # Mide el tiempo de ejecucion de un metodo
 
     print(f'\n⏳ Ordenando {len(lista_vehiculos)} vehículos...')
     
@@ -142,6 +142,7 @@ def ejecutar_menu_ordenamiento_vehicular():
             {'=' * 60}
             {'=' * 60}
             '''))
+            return
 
 ejecutar_menu_ordenamiento_vehicular()
 

@@ -1,5 +1,4 @@
-from generador_cantidad_vehiculos import generador_lista_vehiculos
-#  INSERTION SORT 
+# INSERTION SORT 
 def insertion_sort(lista, index_ordenamiento):
 
     for i in range(1, len(lista)):
@@ -13,6 +12,7 @@ def insertion_sort(lista, index_ordenamiento):
     
     return lista
 
+
 # BUBBLE SORT
 def bubble_sort(lista, index_ordenamiento):
 
@@ -25,6 +25,7 @@ def bubble_sort(lista, index_ordenamiento):
                 copia[valor] = copia[valor + 1]
                 copia[valor + 1] = temporal
     return copia
+
 
 # SELECTION SORT 
 def selection_sort(lista, index_ordenamiento):
@@ -41,6 +42,7 @@ def selection_sort(lista, index_ordenamiento):
         copia.remove(valor_mas_pequeno)
 
     return ordenada
+
 
 # QUICKSORT
 def quicksort(lista, index_ordenamiento):
@@ -64,9 +66,9 @@ def quicksort(lista, index_ordenamiento):
     return ordenada
 
 
-########################################
 
-# Este funciona mejor que todas excepto quicksort 
+# Ingresa a una lista los vehiculos de prioridad 1 y el resto lo acomoda con quicksort usando hora de llegada 
+# Esta funciona mejor que todas excepto quicksort 
 
 def metodo_rapido(lista, index_ordenamiento=None):
     lista_prioridad = []
@@ -78,11 +80,12 @@ def metodo_rapido(lista, index_ordenamiento=None):
         else:
             resto_de_listas.append(vehiculo)
     
-    resto_ordenado = quicksort(resto_de_listas, 2)
+    resto_ordenado = quicksort(resto_de_listas, 3)
     resultado = lista_prioridad + resto_ordenado
     return resultado
 
-# este revienta a todas jaja
+
+# Ordenamiento por Preclasifcacion de Prioridad 
 
 def preclasificacion_por_prioridad(lista, index_ordenamiento=None):
     prioridades = {1: [], 2: [], 3: []}
@@ -91,8 +94,6 @@ def preclasificacion_por_prioridad(lista, index_ordenamiento=None):
         prioridades[vehiculo[1]].append(vehiculo)
 
     return prioridades[1] + prioridades[2] + prioridades[3]
-
-# este funciona mejor porque es lineal. a diferencia de los otros algoritmos, este metodo no compara, no cambia posiciones, no ve valores vecinos, solamente clasifica y agrega a una lista cuando cumple la condicion que queremos. esto tiene una explicacion, aun no lo comprendo mucho (tiene que ver con algo que se llama "Big O Notation"), pero basicamente se debe a como crecen la cantidad de operaciones que hace un algoritmo en base a la cantidad de comparaciones que tiene ue hacer, es decir, se multiplican la cantidad de operaciones al cuadrado, conforme crece el agoritmo. Este metodo al ordenar de manera lineal, no crece exponencialmente: si hay 1000 datos a clasificar, clasifica 1000 datos y punto 
 
 
 
