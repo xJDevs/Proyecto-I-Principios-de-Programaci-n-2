@@ -1,6 +1,6 @@
 import time, textwrap, os
 from generador_cantidad_vehiculos import generador_lista_vehiculos
-from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort, metodo_rapido, preclasificacion_por_prioridad
+from metodos_ordenamiento import insertion_sort, bubble_sort, selection_sort, quicksort, preclasificacion_por_prioridad
 
 METODOS_DE_ORDENAMIENTO = {
     "1": (bubble_sort, "Bubble Sort 🫧"),
