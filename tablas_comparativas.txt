@@ -1,0 +1,30 @@
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  10
+Tiempo de ejecución:  0.000047 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Prioridad 🚨
+Vehículos ordenados:  15
+Tiempo de ejecución:  0.000089 segundos
+============================================================
+
+
+============================================================
+RESULTADOS DEL ORDENAMIENTO
+============================================================
+Método utilizado:     Bubble Sort 🫧
+Criterio:             Hora de llegada ⏰
+Vehículos ordenados:  12
+Tiempo de ejecución:  0.000041 segundos
+============================================================
+
